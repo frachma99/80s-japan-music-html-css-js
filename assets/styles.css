@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  display: inline;
+}
+
+nav {
+  display: flex;
+  top: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: brown;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  padding: 0 20px;
+  justify-content: space-around;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: gainsboro;
+}
+
+.content-main {
+  margin-top: 3em;
+}
+
+section {
+  height: 100vh;
+  padding: 20px;
+}
+
+section#journey,
+aside {
+  background-color: rgb(207, 185, 167);
+}
+
+.jumbotron {
+  height: 100vh;
+  display: flex;
+  background: rgba(0, 0, 0, 0.7) url(/assets/img/jumbotron.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: justify;
+}
+
+.button {
+  display: inline-block;
+  background-color: brown;
+  color: #fff;
+  margin-top: 50px;
+  padding: 0.75rem 2.5rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.menu-toggle {
+  font-size: 1.5em;
+  color: gainsboro;
+  display: none;
+  margin-right: 20px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.menu-logo {
+  color: gainsboro;
+  display: none;
+}
+
+.show-menu {
+  transform: translateX(0);
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.intros {
+  flex-basis: 60%;
+}
+
+.intro-title {
+  font-size: 20px;
+}
+
+.intro-container {
+  font-size: 18px;
+}
+
+.intro-content {
+  padding: 1rem 0;
+}
+
+.img-intro {
+  width: 25em;
+  float: right;
+  justify-self: center;
+}
+
+.journeys {
+  gap: 1rem;
+  padding: 0.5rem 0;
+  transition: all 1s;
+}
+
+.journey-wrapper {
+  background-color: antiquewhite;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 1em;
+}
+
+.journey-content {
+  display: none;
+  padding: 10px;
+}
+
+.show-journey {
+  display: flex;
+}
+
+.komunitas-wrapper {
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.komunitas-content:hover {
+  cursor: pointer;
+  transform: scale(115%);
+  transition: 0.5s all;
+}
+
+.komunitas-content {
+  background-color: brown;
+  border-radius: 1rem;
+  color: white;
+  padding: 1rem;
+}
+
+.komunitas-content h1 {
+  margin-top: 100px;
+}
+
+.container {
+  float: left;
+  width: 75%;
+  overflow: auto;
+}
+
+aside {
+  float: right;
+  height: 100vh;
+  padding: 10px;
+}
+
+footer {
+  background-color: brown;
+  color: #fff;
+  padding: 20px;
+}
+
+footer p {
+  text-align: center;
+}
+
+img.img-profil {
+  height: 10rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 588px) {
+  .container-aside,
+  .container {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+  .menu-logo {
+    display: flex;
+  }
+  nav {
+    position: fixed;
+  }
+  nav ul {
+    right: 0;
+    top: 0;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: brown;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+  }
+
+  .flex {
+    display: inline;
+  }
+
+  .img-intro {
+    width: auto;
+    height: 16em;
+  }
+}
